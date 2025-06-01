@@ -2,6 +2,9 @@
     background-color: #191f25;
     border-radius: 1rem;
     padding: 1rem;   
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
 }
 
 .headshot {

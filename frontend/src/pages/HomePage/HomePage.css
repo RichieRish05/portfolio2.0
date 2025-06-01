@@ -120,19 +120,8 @@
 
   .headshot-container {
     animation: none;
-    display: none;
-  }
-
-  .headshot {
     grid-column: 1;
     grid-row: 1;
-    justify-self: center;
-    width: 100%;
-
-
-  }
-  .hide-headshot {
-    display: block;
   }
 
   .hero-container {
