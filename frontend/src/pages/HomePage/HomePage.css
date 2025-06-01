@@ -1,0 +1,82 @@
+.homepage-wrapper {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    gap: 1.5rem;
+    padding: 2rem;
+
+}
+
+
+.title-font {
+    margin: 0.25rem;
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: left;
+}
+
+
+
+
+.quote {
+    background-color: #006edc;
+    border-radius: 1rem;
+    padding: 1rem;   
+    grid-column: 3; /* sits in column 1*/
+    grid-row: 3;        /* sits in row 2 */
+    
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+
+
+
+
+
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+
+@keyframes slideInDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideInUp{
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+

@@ -1,0 +1,18 @@
+.job-title {
+    margin: 0.25rem;
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 125%;
+
+}
+
+
+.job-descr{
+    background-color: #006edc;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    grid-column: 1; /* sits in column 1*/
+    grid-row: 2;        /* sits in row 2 */
+    animation: slideInRight 0.6s ease-out forwards;
+}

@@ -1,0 +1,9 @@
+.education {
+    background-color: #191f25;
+    border-radius: 1rem;
+    padding: 1rem;   
+    grid-column: 2 / 4; /* sits in column 1*/
+    grid-row: 4;        /* sits in row 4 */
+
+    animation: slideInLeft 0.6s ease-out forwards;
+}

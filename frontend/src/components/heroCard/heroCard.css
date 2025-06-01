@@ -1,0 +1,20 @@
+.hero-container {
+    background-color: #191f25;
+    border-radius: 1rem;
+    padding: 1rem;    
+    grid-column: 2; /* sits in column 1 to 2 */
+    grid-row: 2 / 4;        /* spans rows 2 and 3 */      
+}
+
+
+.hero-title {
+    margin: 0.25rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.github-logo {
+    height: 15rem;
+    width: auto;
+    object-fit: contain; 
+}

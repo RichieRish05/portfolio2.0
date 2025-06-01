@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --bg-dark: #000000;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -23,6 +24,7 @@ a:hover {
 }
 
 body {
+  background: var(--bg-dark);
   margin: 0;
   display: flex;
   place-items: center;
