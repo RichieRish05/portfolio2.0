@@ -1,7 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
 import "./HomePage.css"
-
-
 
 import AboutMe from "../../components/aboutMeCard/aboutMe";
 import JobDescription from "../../components/jobDescriptionCard/jobDescription";

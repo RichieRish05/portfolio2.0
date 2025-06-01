@@ -1,4 +1,3 @@
-import Technology from "../technology/technology";
 import './technologiesCard.css'
 
 import pytorchLogo from "../../assets/technologies/pytorch.svg";
@@ -12,6 +11,18 @@ import pythonLogo from  "../../assets/technologies/python.png";
 import reactLogo from  "../../assets/technologies/react.svg";
 import sqlLogo from  "../../assets/technologies/sql.png";
 import typescriptLogo from  "../../assets/technologies/typescript.png";
+
+function Technology({techName, imageURL}) {
+
+    return (
+        <img 
+            className="tech-icon" 
+            src={imageURL} 
+            alt={techName}
+            title={techName}
+        />
+    )
+}
 
 
 export default function TechnologiesCard() {

@@ -6,3 +6,10 @@
     grid-row: 3 / 5;        /* spans rows 3 and 4 */
     animation: slideInUp 0.6s ease-out forwards;
 }
+
+.tech-icon {
+    width: 2.5rem;         
+    height: 2.5rem;
+    object-fit: contain; /* ensures the image keeps its aspect ratio */
+    margin: 0.5rem;       /* spacing around icons */
+}
