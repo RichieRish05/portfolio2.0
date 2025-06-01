@@ -12,7 +12,13 @@ import reactLogo from  "../../assets/technologies/react.svg";
 import sqlLogo from  "../../assets/technologies/sql.png";
 import typescriptLogo from  "../../assets/technologies/typescript.png";
 
-function Technology({techName, imageURL}) {
+
+  
+type TechnologyProps = {
+    techName: string;
+    imageURL: string;
+}
+function Technology({techName, imageURL}: TechnologyProps) {
 
     return (
         <img 

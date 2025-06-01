@@ -1,8 +1,14 @@
 import './educationCard.css'
 
 
-
-function Education({institutionName, startDate, endDate, degreePursued}) {
+type EducationProps = {
+    institutionName: string;
+    startDate: string;
+    endDate: string;
+    degreePursued: string;
+  };
+  
+function Education({ institutionName, startDate, endDate, degreePursued }: EducationProps) {
 
     return (
         <div>
