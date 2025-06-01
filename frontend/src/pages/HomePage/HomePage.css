@@ -5,7 +5,49 @@
     grid-auto-rows: minmax(150px, auto);
     gap: 1.5rem;
     padding: 2rem;
+}
 
+
+
+.about-me {
+    grid-column: 1 / 3; /* spans column 1 to 2 */
+    grid-row: 1;        /* sits in row 1 */
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+.education {
+    grid-column: 2 / 4; /* spans columns 2 to 3*/
+    grid-row: 4;        /* sits in row 4 */
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.headshot-container {
+    grid-column: 3;  /* sits in column 3*/
+    grid-row: 1/3;        /* sits in row 4 */
+    animation: slideInDown 0.6s ease-out forwards;
+}
+
+.hero-container {
+    grid-column: 2; /* sits in column 1 to 2 */
+    grid-row: 2 / 4;        /* spans rows 2 and 3 */  
+}
+
+.job-descr {
+    grid-column: 1; /* sits in column 1*/
+    grid-row: 2;        /* sits in row 2 */
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+.quote {
+    grid-column: 3; /* sits in column 1*/
+    grid-row: 3;        /* sits in row 2 */
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.technologies {
+    grid-column: 1; /* sits in column 1*/
+    grid-row: 3 / 5;        /* spans rows 3 and 4 */
+    animation: slideInUp 0.6s ease-out forwards;
 }
 
 
@@ -17,22 +59,9 @@
 }
 
 
-
-
-.quote {
-    background-color: #006edc;
-    border-radius: 1rem;
-    padding: 1rem;   
-    grid-column: 3; /* sits in column 1*/
-    grid-row: 3;        /* sits in row 2 */
-    
-    animation: slideInLeft 0.6s ease-out forwards;
+.hide-headshot {
+  display: none;
 }
-
-
-
-
-
 
 
 @keyframes slideInRight {
@@ -79,4 +108,70 @@
       opacity: 1;
     }
 }
+
+
+@media (max-width: 768px) {
+  .homepage-wrapper {
+    grid-template-columns: 1fr;  /* Stack items vertically */
+    padding: 1rem;               /* Reduce padding on small screens */
+    gap: 1rem;                   /* Optional: tighter spacing */
+    animation: none;
+  }
+
+  .headshot-container {
+    animation: none;
+    display: none;
+  }
+
+  .headshot {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    width: 100%;
+
+
+  }
+  .hide-headshot {
+    display: block;
+  }
+
+  .hero-container {
+    grid-column: 1;
+    grid-row: 2;
+    animation: none;
+  }
+
+  .job-descr {
+    grid-column: 1;
+    grid-row: 3;
+    animation: none;
+  }
+
+  .about-me {
+    grid-column: 1;
+    grid-row: 4;
+    animation: none;
+  }
+
+  .technologies {
+    grid-column: 1;
+    grid-row: 5;
+    animation: none;
+  }
+
+  .education {
+    grid-column: 1;
+    grid-row: 6;
+    animation: none;
+  }
+
+  .quote {
+    grid-column: 1;
+    grid-row: 7;
+    animation: none;
+  }
+}
+
+
+
 

@@ -8,6 +8,12 @@ import EducationCard from "../../homePageComponents/educationCard/educationCard"
 import HeadshotCard from "../../homePageComponents/headshotCard/headshotCard";
 import QuoteCard from "../../homePageComponents/quoteCard/quoteCard";
 
+function PhoneHeadshot() {
+    return (
+        <img className="hide-headshot headshot" src="Headshot.JPG"/>
+    )
+}
+
 export default function HomePage() {
 
 
@@ -15,6 +21,7 @@ export default function HomePage() {
     return (
         <div className="homepage-wrapper">
             <AboutMe/>
+            <PhoneHeadshot/>
             <JobDescription/>
             <TechnologiesCard/>
             <HeroCard/>

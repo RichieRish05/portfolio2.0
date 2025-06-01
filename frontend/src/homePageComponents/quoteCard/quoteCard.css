@@ -2,8 +2,4 @@
     background-color: #006edc;
     border-radius: 1rem;
     padding: 1rem;   
-    grid-column: 3; /* sits in column 1*/
-    grid-row: 3;        /* sits in row 2 */
-    
-    animation: slideInLeft 0.6s ease-out forwards;
 }
