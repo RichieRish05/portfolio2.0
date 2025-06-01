@@ -1,12 +1,12 @@
 import "./HomePage.css"
 
-import AboutMe from "../../components/aboutMeCard/aboutMe";
-import JobDescription from "../../components/jobDescriptionCard/jobDescription";
-import TechnologiesCard from "../../components/technologiesCard/technologiesCard";
-import HeroCard from "../../components/heroCard/heroCard";
-import EducationCard from "../../components/educationCard/educationCard";
-import HeadshotCard from "../../components/headshotCard/headshotCard";
-import QuoteCard from "../../components/quoteCard/quoteCard";
+import AboutMe from "../../homePageComponents/aboutMeCard/aboutMe";
+import JobDescription from "../../homePageComponents/jobDescriptionCard/jobDescription";
+import TechnologiesCard from "../../homePageComponents/technologiesCard/technologiesCard";
+import HeroCard from "../../homePageComponents/heroCard/heroCard";
+import EducationCard from "../../homePageComponents/educationCard/educationCard";
+import HeadshotCard from "../../homePageComponents/headshotCard/headshotCard";
+import QuoteCard from "../../homePageComponents/quoteCard/quoteCard";
 
 export default function HomePage() {
 
