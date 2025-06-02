@@ -1,0 +1,6 @@
+.projects-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 200px; /* or height: 100vh for full screen */
+}
