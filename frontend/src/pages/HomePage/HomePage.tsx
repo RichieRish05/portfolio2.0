@@ -12,7 +12,6 @@ import QuoteCard from "../../homePageComponents/quoteCard/quoteCard";
 export default function HomePage() {
 
 
-
     return (
         <div className="homepage-wrapper">
             <AboutMe/>

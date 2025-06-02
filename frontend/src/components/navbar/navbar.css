@@ -2,73 +2,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
 .navbar {
-    display: flex;
-    padding: 1.25rem 2rem;
     background-color: #191f25;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: fit-content;
-    margin: 0 auto;
     border-radius: 1rem;
+    max-width: 15rem;      /* control width */
+    margin: 0 auto;        /* center horizontally */
+    padding: 0.5rem;
+    padding-right: 2.75rem; 
+    margin-top: 2rem;
+    align-items: center; /* vertically center if needed */
   }
 
-.logo {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: #00b4d8;
-}
+
 
 .nav-links {
-  list-style: none;
+  justify-content: center;
+  align-items: center; /* vertically center if needed */
   display: flex;
+  list-style: none;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
+  color: white;
+}
+
+.nav-links li {
+  position: relative;
+  z-index: 2; /* Make sure it's above the pill */
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  position: relative;
-  transition: color 0.3s;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #00b4d8;
-  transition: width 0.3s ease-in-out;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
+  color:white;
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #00b4d8;
+  color: rgb(160, 158, 158);; /* change to any highlight color on hover */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: #191f25;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    display: none;
-    padding: 1rem 2rem;
-  }
 
-  .navbar.open .nav-links {
-    display: flex;
-  }
+.pill {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 5rem;      
+  height: 60%;      
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  z-index: 1;
+  transition: transform 0.4s ease;
 }
+
+

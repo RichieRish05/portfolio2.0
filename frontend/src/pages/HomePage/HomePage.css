@@ -110,7 +110,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .homepage-wrapper {
     grid-template-columns: 1fr;  /* Stack items vertically */
     padding: 1rem;               /* Reduce padding on small screens */
