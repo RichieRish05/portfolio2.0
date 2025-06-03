@@ -1,7 +1,7 @@
 import './projectCard.css';
 import Tilt from "react-parallax-tilt";
 
-import MoodySoundImage from "../../assets/img/moody-sound.png";
+import GithubLogo from "../../assets/img/github-mark.png";
 
 type ProjectCardProps = {
     title: string;
@@ -21,10 +21,17 @@ export default function ProjectCard({title, description, imageLink, githubLink, 
             transitionSpeed={450}
             scale={1.05}
             className='project-card'>
+                <div className='image-container'>
+                    <img className='project-image' src={imageLink}/>
+                    <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                        <img className="github-link" src={GithubLogo}/>
+                    </a>
+                </div>
 
-                <img className='project-image' src={MoodySoundImage}/>
                 <h3 className='project-title'>{title}</h3>
+
                 <p className='project-descr'>{description}</p>
+    
 
         </Tilt>
     )

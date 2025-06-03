@@ -1,0 +1,50 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    background-color: #191f25;
+    border-radius: 1rem;
+    text-align: left;
+    color: white;
+    max-width:17.5rem;
+}
+
+.image-container {
+    position: relative;
+}
+
+.project-image {
+    margin: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+    display: block;
+    height: 17rem
+}
+
+.github-link {
+    width: 3rem;
+    height: auto;
+    background-color: black;
+    border-color: black;
+    border-width: 1rem;
+    border-radius: 99%;
+    position: absolute;
+    top: 10%;     /* adjust as needed */
+    left: 78%;
+}
+
+.project-title {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.25rem;
+    padding-left: 1rem;
+}
+
+
+.project-descr {
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    text-align: left;
+}
