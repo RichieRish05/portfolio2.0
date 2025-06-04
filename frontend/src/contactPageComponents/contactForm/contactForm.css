@@ -8,21 +8,44 @@
   border-radius: 1rem;
   background-color: #191f25;
   gap: 1rem;
-  padding: 1rem;
+  padding-bottom: 1rem;
 }
 
 .form-container input,
 .form-container textarea,
 .form-container select {
-  background-color: #282626;
+  background-color: #2a2a2d; 
   color: white;
   border-style: none;
-  border-radius: 0.25rem;
-  width: 80%;
-  padding: 0.25rem 1rem; /* Top-bottom: 0.75rem, Left-right: 1rem */
+  border-radius: 0.5rem;
+  width: 90%;
+  padding: 0.25rem 1rem; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
+/* Remove glow on focus */
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.form-container textarea {
+  position: relative;
+  padding-top: 1rem; /* moves cursor down from top edge */
+  color: #aaa;      /* optional: light gray */
+  font-size: 1rem;  /* optional: adjust font */
+  resize: none;
+}
+
+
+
+
 .email-field {
+
   height: 3rem;
 }
 
@@ -32,6 +55,17 @@
 
 .submit-button {
   background-color: #282626;
-  width: 85%;
   color: white;
+  width: 95%;
+}
+
+
+.form-header {
+    align-self: flex-start;
+    padding: 0rem 2rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem; /* reduce space below header */
+    font-size: 2rem;
+    font-weight: 700px;
+    
 }
