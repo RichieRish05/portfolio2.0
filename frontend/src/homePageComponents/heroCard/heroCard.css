@@ -1,18 +1,17 @@
 .hero-container {
-    background-color: #191f25;
-    border-radius: 1rem;
-    padding: 1rem;        
+  background-color: #191f25;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
-
 .hero-title {
-    margin: 0.25rem;
-    font-weight: 800;
-    font-size: 2rem;
+  margin: 0.25rem;
+  font-weight: 800;
+  font-size: 2rem;
 }
 
 .github-logo {
-    height: 15rem;
-    width: auto;
-    object-fit: contain; 
+  height: 15rem;
+  width: auto;
+  object-fit: contain;
 }

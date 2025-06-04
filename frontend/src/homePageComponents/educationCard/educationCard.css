@@ -1,24 +1,23 @@
 .education {
-    background-color: #191f25;
-    border-radius: 1rem;
-    padding: 1rem;   
+  background-color: #191f25;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .education-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .education-header p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .education-content {
-    padding: 0;
-    margin-top: 0rem;
-    text-align: left;
-    color: #a0a0a0;
+  padding: 0;
+  margin-top: 0rem;
+  text-align: left;
+  color: #a0a0a0;
 }
-

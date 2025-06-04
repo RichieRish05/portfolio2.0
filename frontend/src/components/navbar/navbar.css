@@ -1,21 +1,19 @@
 /* Import a clean font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 
 .navbar {
-    background-color: #191f25;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-radius: 1rem;
-    max-width: 15rem;      /* control width */
-    margin: 0 auto;        /* center horizontally */
-    padding: 0.5rem;
-    padding-right: 2.75rem; 
-    margin-top: 2rem;
-    align-items: center; /* vertically center if needed */
-  }
-
-
+  background-color: #191f25;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 1rem;
+  max-width: 15rem; /* control width */
+  margin: 0 auto; /* center horizontally */
+  padding: 0.5rem;
+  padding-right: 2.75rem;
+  margin-top: 2rem;
+  align-items: center; /* vertically center if needed */
+}
 
 .nav-links {
   justify-content: center;
@@ -32,26 +30,23 @@
 }
 
 .nav-links a {
-  color:white;
+  color: white;
   text-decoration: none; /* removes underline */
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: rgb(160, 158, 158);; /* change to any highlight color on hover */
+  color: rgb(160, 158, 158); /* change to any highlight color on hover */
 }
-
 
 .pill {
   position: absolute;
   top: 20%;
   left: 5%;
-  width: 5rem;      
-  height: 60%;      
+  width: 5rem;
+  height: 60%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   z-index: 1;
   transition: transform 0.4s ease;
 }
-
-

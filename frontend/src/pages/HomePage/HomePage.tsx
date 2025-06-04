@@ -1,4 +1,4 @@
-import "./HomePage.css"
+import "./HomePage.css";
 
 import AboutMe from "../../homePageComponents/aboutMeCard/aboutMe";
 import JobDescription from "../../homePageComponents/jobDescriptionCard/jobDescription";
@@ -8,23 +8,16 @@ import EducationCard from "../../homePageComponents/educationCard/educationCard"
 import HeadshotCard from "../../homePageComponents/headshotCard/headshotCard";
 import QuoteCard from "../../homePageComponents/quoteCard/quoteCard";
 
-
 export default function HomePage() {
-
-
-    return (
-        <div className="homepage-wrapper">
-            <AboutMe/>
-            <JobDescription/>
-            <TechnologiesCard/>
-            <HeroCard/>
-            <EducationCard/>
-            <HeadshotCard/>
-            <QuoteCard/>
-        </div>
-
-
-
-
-    )
+  return (
+    <div className="homepage-wrapper">
+      <AboutMe />
+      <JobDescription />
+      <TechnologiesCard />
+      <HeroCard />
+      <EducationCard />
+      <HeadshotCard />
+      <QuoteCard />
+    </div>
+  );
 }

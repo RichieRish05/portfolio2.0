@@ -1,8 +1,8 @@
 .quote {
-    background-color: #006edc;
-    border-radius: 1rem;
-    padding: 1rem;   
-    display: flex;
-    justify-content: center; /* centers horizontally */
-    align-items: center;     /* centers vertically */
+  background-color: #006edc;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
 }

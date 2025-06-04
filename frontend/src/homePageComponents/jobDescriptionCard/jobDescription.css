@@ -1,17 +1,16 @@
 .job-title {
-    margin: 0.25rem;
-    font-weight: 800;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 125%;
+  margin: 0.25rem;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 125%;
 }
 
-
-.job-descr{
-    background-color: #006edc;
-    border-radius: 1rem;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center; /* centers horizontally */
-    align-items: center;     /* centers vertically */
+.job-descr {
+  background-color: #006edc;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
 }

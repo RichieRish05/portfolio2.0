@@ -1,0 +1,37 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  min-width: 20rem;
+  border-radius: 1rem;
+  background-color: #191f25;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  background-color: #282626;
+  color: white;
+  border-style: none;
+  border-radius: 0.25rem;
+  width: 80%;
+  padding: 0.25rem 1rem; /* Top-bottom: 0.75rem, Left-right: 1rem */
+}
+
+.email-field {
+  height: 3rem;
+}
+
+.content-field {
+  height: 10rem;
+}
+
+.submit-button {
+  background-color: #282626;
+  width: 85%;
+  color: white;
+}

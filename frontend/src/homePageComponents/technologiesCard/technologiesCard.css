@@ -1,12 +1,12 @@
 .technologies {
-    background-color: #191f25;
-    border-radius: 1rem;
-    padding: 1rem;   
+  background-color: #191f25;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .tech-icon {
-    width: 2.5rem;         
-    height: 2.5rem;
-    object-fit: contain; /* ensures the image keeps its aspect ratio */
-    margin: 0.5rem;       /* spacing around icons */
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain; /* ensures the image keeps its aspect ratio */
+  margin: 0.5rem; /* spacing around icons */
 }

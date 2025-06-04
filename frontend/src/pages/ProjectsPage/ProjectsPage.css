@@ -1,9 +1,9 @@
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    row-gap: 0.5rem;
-    column-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 0.5rem;
+  column-gap: 2rem;
 }
