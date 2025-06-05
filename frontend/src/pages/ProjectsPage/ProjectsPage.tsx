@@ -5,6 +5,7 @@ import ProjectCard from "../../projectsPageComponents/projectCard/projectCard";
 import MoodySoundImage from "../../assets/img/moody-sound.png";
 import ChessImage from "../../assets/img/chess.png";
 import ChatToMeImage from "../../assets/img/chat-to-me.png";
+import BunnyMesh from "../../assets/img/bunny-mesh.png";
 
 export default function ProjectsPage() {
   return (
@@ -28,6 +29,13 @@ export default function ProjectsPage() {
         description="A RAG Chatbot Tuned to My Professional Experiences."
         imageLink={ChatToMeImage}
         githubLink="https://github.com/RichieRish05/ChatToMe"
+        tags={[]}
+      />
+      <ProjectCard
+        title="ShadowLite 3D"
+        description="A Numpy Tool for Simulating 3D Shadows and Brightness."
+        imageLink={BunnyMesh}
+        githubLink="https://github.com/RichieRish05/Graphical-Mesh-Shadow-and-Brightness-Calculator"
         tags={[]}
       />
     </div>
