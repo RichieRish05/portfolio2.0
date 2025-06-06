@@ -1,18 +1,14 @@
-/* Import a clean font */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 
 .navbar {
   background-color: #191f25;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: fixed;
+  top: 10%;           /* distance from top */
+  left: 50%;          /* distance from left */
+  z-index: 1000;       /* ensures it stays above other content */
   border-radius: 1rem;
-  max-width: 15rem; /* control width */
-  margin: 0 auto; /* center horizontally */
-  padding: 0.5rem;
-  padding-right: 2.75rem;
-  margin-top: 2rem;
-  align-items: center; /* vertically center if needed */
+  padding-right: 2rem;
+  translate: -50% -50%;
+  margin-bottom: 0%;
 }
 
 .nav-links {
@@ -42,7 +38,7 @@
 .pill {
   position: absolute;
   top: 20%;
-  left: 5%;
+  left: 7%;
   width: 5rem;
   height: 60%;
   background-color: rgba(255, 255, 255, 0.1);

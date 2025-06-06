@@ -10,7 +10,7 @@ export default function Navbar() {
 
   const pillOffset: Record<string, React.CSSProperties> = {
     "/": { transform: "translateX(0%)" },
-    "/projects": { transform: "translateX(106.5%)" },
+    "/projects": { transform: "translateX(105%)" },
     "/contact": { transform: "translateX(222.5%)" },
   };
 

@@ -1,4 +1,5 @@
 .homepage-wrapper {
+  margin-top: 6rem; /* adjust to clear the fixed navbar */
   color: white;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
