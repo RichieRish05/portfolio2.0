@@ -7,7 +7,7 @@
   z-index: 1000;       /* ensures it stays above other content */
   border-radius: 1rem;
   padding-right: 2rem;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
   margin-bottom: 0%;
 }
 

@@ -9,8 +9,8 @@
 }
 
 
-@media (max-height: 800px) {
+@media(max-width: 1350px) { 
   .projects-container{
-    margin-top: 5%;
+    margin-top: 5rem;
   }
 }
