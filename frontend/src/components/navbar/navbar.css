@@ -1,10 +1,9 @@
-
 .navbar {
   background-color: #191f25;
   position: fixed;
-  top: 10%;           /* distance from top */
-  left: 50%;          /* distance from left */
-  z-index: 1000;       /* ensures it stays above other content */
+  top: 10%; /* distance from top */
+  left: 50%; /* distance from left */
+  z-index: 1000; /* ensures it stays above other content */
   border-radius: 1rem;
   padding-right: 2rem;
   transform: translate(-50%, -50%);

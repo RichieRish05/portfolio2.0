@@ -46,8 +46,6 @@
   grid-row: 3; /* sits in row 2 */
 }
 
-
-
 @media (max-width: 1050px) {
   .contact-page-wrapper {
     grid-template-columns: 1fr; /* Stack items vertically */
@@ -58,9 +56,6 @@
     justify-items: center;
     justify-content: center;
   }
-
-
-
 
   .mail-card {
     grid-column: 1; /* sits in column 1*/
@@ -85,6 +80,4 @@
     width: 96%;
     padding: 2%;
   }
-
-
 }

@@ -8,9 +8,8 @@
   column-gap: 2rem;
 }
 
-
-@media(max-width: 1350px) { 
-  .projects-container{
+@media (max-width: 1350px) {
+  .projects-container {
     margin-top: 5rem;
   }
 }
