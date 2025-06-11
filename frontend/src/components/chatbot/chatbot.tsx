@@ -2,69 +2,75 @@ import "./chatbot.css";
 
 import RestingLion from "../../assets/chatbot/lion-resting.mov";
 import TalkingLion from "../../assets/chatbot/lion-talking.mov";
+import axios from "axios";
+
+const chatbotURL = import.meta.env.VITE_CHATBOT_URL;
 
 import { useState } from "react";
 
 export default function ChatBot() {
   const [chatvideo, setChatVideo] = useState(RestingLion);
   const [showChat, setShowChat] = useState(false);
+  const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState([
     { type: "bot", text: "Hi there! How can I help you today?" },
   ]);
+  
   const [input, setInput] = useState("");
-
   const onClick = (e) => {
     e.preventDefault();
     setShowChat((prev) => !prev);
   };
 
-
-  const sendMessage = (e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
-  }
+    setMessages((prev) => [...prev, { type: "user", text: question }]);
 
+    setQuestion("");
+
+    try {
+      axios
+        .post(`${import.meta.env.VITE_CHATBOT_URL}/ask`, {
+          text: question,
+        })
+        .then((res) => {
+          console.log(res.data);
+          const answer = res.data.answer;
+          setMessages((prev) => [...prev, { type: "bot", text: answer }]);
+        });
+    } catch (error) {
+      console.error("API call went wrong");
+      setMessages((prev) => [
+        ...prev,
+        { type: "bot", text: "Sorry, I didn't catch that." },
+      ]);
+    }
+  };
+
+  const handleQuestionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuestion(e.target.value);
+  };
 
   return (
     <div>
-
-        <div className={`chat-container ${!showChat ? 'hidden' : ""}`}>
-            <div className="chat-box">
-                {messages.map((msg, index) => (
-                    <div key={index} className={`message ${msg.type}`}>
-                        {msg.text}
-                    </div>
-                ))}
-
-            </div>
-
-        </div>
-        
-
-      {/* {/* <div className="chat-container">
-        <h2>Ask me anything</h2>
+      <div className={`chat-container ${!showChat ? "hidden" : ""}`}>
         <div className="chat-box">
-          {messages.map((msg, idx) => (
-            <div key={idx} className={`message ${msg.type}`}>
+          {messages.map((msg, index) => (
+            <div key={index} className={`message ${msg.type}`}>
               {msg.text}
             </div>
           ))}
         </div>
         <form className="chat-input" onSubmit={sendMessage}>
           <input
-            type="text"
-            placeholder="Type your message..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={question}
+            onChange={handleQuestionChange}
+            placeholder="Ask a question"
           />
-          <button type="submit">Send</button>
+          <button>Send</button>
         </form>
-      </div> */}
+      </div>
 
-
-
-
-
-      
       <video
         className="video-container"
         autoPlay
