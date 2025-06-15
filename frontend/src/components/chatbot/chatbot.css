@@ -7,13 +7,12 @@
   height: 10rem;
   /* outline: 1px solid red; */
   z-index: 1000;
-  transition: transform 100 ease-in-out;
   animation: slideInUp 1s ease-out forwards;
 
 }
 
 .video-container:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 
@@ -22,14 +21,14 @@
 .video {
   position: absolute;
   width: 10rem;
-  /* opacity: 0; */
   pointer-events: none;
   transition: opacity 0.5s ease-in-out;
 }
 
 .video.visible {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: all;
+  transition: transform 100 ease-in-out;
 }
 
 .video.hide {

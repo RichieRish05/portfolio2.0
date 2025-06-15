@@ -56,19 +56,19 @@ export default function ChatBot() {
     setCanSend(false);
 
     // API call for chatbot response
-    // let botMessage = { type: "bot", text: "" }; // Define bot message
-    // try {
-    //   const res = await axios.post(`${import.meta.env.VITE_CHATBOT_URL}/ask`, {
-    //     text: question,
-    //   });
-    //   const answer = res.data.answer;
-    //   botMessage = { type: "bot", text: answer };
-    // } catch (error) {
-    //   console.error("API call went wrong");
-    //   botMessage = { type: "bot", text: "Sorry, I didn't catch that." };
-    // }
+    let botMessage = { type: "bot", text: "" }; // Define bot message
+    try {
+      const res = await axios.post(`${import.meta.env.VITE_CHATBOT_URL}/ask`, {
+        text: question,
+      });
+      const answer = res.data.answer;
+      botMessage = { type: "bot", text: answer };
+    } catch (error) {
+      console.error("API call went wrong");
+      botMessage = { type: "bot", text: "Sorry, I didn't catch that." };
+    }
 
-    const botMessage = {type: "bot", text: "Hello there I am just talking now this is a testing message and a run on sentence to ensure that we don't waste money on API calls that aren't used for relevant users where is the period oh there it is."}
+    //const botMessage = {type: "bot", text: "Hello there I am just talking now this is a testing message and a run on sentence to ensure that we don't waste money on API calls that aren't used for relevant users where is the period oh there it is."}
     setMessages((prev) => [...prev, botMessage]);
   };
 
