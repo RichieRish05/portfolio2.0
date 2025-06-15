@@ -83,11 +83,14 @@ export default function ChatBot() {
 
 
   const handleTypingStart = () => setIsTalking(true);
-  const handleTypingDone = () => setIsTalking(false);
+  const handleTypingDone = () => {
+    setIsTalking(false);
+    setCanSend(true);
+  };
 
   return (
     <div>
-      <div className={`chat-container ${!showChat ? "hidden" : ""}`}>
+      <div className={`chat-container ${!showChat ? "hidden" : "visible"}`}>
         <div className="chat-box">
           {messages.map((msg, idx) => (
             <div key={idx} className={`message ${msg.type}`}>

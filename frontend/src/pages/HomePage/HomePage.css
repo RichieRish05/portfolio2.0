@@ -59,7 +59,7 @@
 .hide-headshot {
   display: none;
 }
-
+/* 
 @keyframes slideInRight {
   0% {
     transform: translateX(-100%);
@@ -102,7 +102,7 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */
 
 @media (max-width: 1050px) {
   .homepage-wrapper {

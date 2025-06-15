@@ -16,6 +16,7 @@ export default function ProjectsPage() {
         imageLink={MoodySoundImage}
         githubLink="https://github.com/RichieRish05/MoodySound2"
         tags={[]}
+        animationLength="0.5s"
       />
       <ProjectCard
         title="Chess"
@@ -23,6 +24,7 @@ export default function ProjectsPage() {
         imageLink={ChessImage}
         githubLink="https://github.com/RichieRish05/GameOfChess"
         tags={[]}
+        animationLength="1s"
       />
       <ProjectCard
         title="ChatToMe"
@@ -30,6 +32,7 @@ export default function ProjectsPage() {
         imageLink={ChatToMeImage}
         githubLink="https://github.com/RichieRish05/ChatToMe"
         tags={[]}
+        animationLength="1.5s"
       />
       <ProjectCard
         title="ShadowLite 3D"
@@ -37,6 +40,7 @@ export default function ProjectsPage() {
         imageLink={BunnyMesh}
         githubLink="https://github.com/RichieRish05/Graphical-Mesh-Shadow-and-Brightness-Calculator"
         tags={[]}
+        animationLength="2s"
       />
     </div>
   );

@@ -8,6 +8,7 @@
   padding-right: 2rem;
   transform: translate(-50%, -50%);
   margin-bottom: 0%;
+  border: groove #8e8e8e; /* dark silver tone */
 }
 
 .nav-links {

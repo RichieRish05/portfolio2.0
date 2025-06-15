@@ -9,6 +9,7 @@ type ProjectCardProps = {
   imageLink: string;
   githubLink: string;
   tags: Array<string>;
+  animationLength: string;
 };
 
 export default function ProjectCard({
@@ -17,6 +18,7 @@ export default function ProjectCard({
   imageLink,
   githubLink,
   tags,
+  animationLength
 }: ProjectCardProps) {
   return (
     <Tilt
@@ -25,6 +27,7 @@ export default function ProjectCard({
       transitionSpeed={450}
       scale={1.05}
       className="project-card"
+      style={{"animation": `fadeSlideUp ${animationLength} ease-out forwards`}}
     >
       <div className="image-container">
         <img className="project-image" src={imageLink} />

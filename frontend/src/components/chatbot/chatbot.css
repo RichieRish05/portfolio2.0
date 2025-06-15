@@ -8,6 +8,7 @@
   /* outline: 1px solid red; */
   z-index: 1000;
   transition: transform 100 ease-in-out;
+  animation: slideInUp 1s ease-out forwards;
 
 }
 
@@ -46,6 +47,17 @@
   z-index: 1000;
   border: solid 1px white;
   color: white;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.chat-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat-container.visible {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .chat-box {
@@ -106,4 +118,6 @@
   background-color: #000770;
   color: rgb(69, 69, 69);
 }
+
+
 
