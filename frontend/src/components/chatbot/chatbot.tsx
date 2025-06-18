@@ -38,7 +38,7 @@ export default function ChatBot() {
   const [showChat, setShowChat] = useState(false);
   const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState([
-    { type: "bot", text: "Hi there! I’m Simba, your personal guide to Rishi’s world. Feel free to ask me anything about his projects, skills, or professional journey!" },
+    { type: "bot", text: "Hi there! I’m Cubby, your personal guide to Rishi’s Portfolio. Feel free to ask me anything about his projects, skills, or professional journey!" },
   ]);
 
   const overlayRef = useRef(null);
@@ -49,12 +49,9 @@ export default function ChatBot() {
     const clickedOutsideOverlay = overlayRef.current && !overlayRef.current.contains(e.target);
 
     if (clickedOutsideOverlay && showChat) {
-      console.log('clicked');
       setShowChat(false);
     }
   }
-
-
 
   document.addEventListener('click', handleClickOutsideOverlay);
 
@@ -83,11 +80,12 @@ export default function ChatBot() {
       const answer = res.data.answer;
       botMessage = { type: "bot", text: answer };
     } catch (error) {
+      console.log(error);
       console.error("API call went wrong");
       botMessage = { type: "bot", text: "Sorry, I didn't catch that." };
     }
 
-    //const botMessage = {type: "bot", text: "Hello there I am just talking now this is a testing message and a run on sentence to ensure that we don't waste money on API calls that aren't used for relevant users where is the period oh there it is."}
+
     setMessages((prev) => [...prev, botMessage]);
   };
 
