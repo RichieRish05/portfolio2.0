@@ -5,7 +5,7 @@ import TalkingLion from "../../assets/chatbot/lion-talking.mov";
 import axios from "axios";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const TypingMessage = ({ text, onTypingStart, onTypingDone }) => {
   const [typedText, { isDone }] = useTypewriter({
@@ -38,13 +38,32 @@ export default function ChatBot() {
   const [showChat, setShowChat] = useState(false);
   const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState([
-    { type: "bot", text: "Hi there! How can I help you today?" },
+    { type: "bot", text: "Hi there! I’m Simba, your personal guide to Rishi’s world. Feel free to ask me anything about his projects, skills, or professional journey!" },
   ]);
+
+  const overlayRef = useRef(null);
+
+
+
+  function handleClickOutsideOverlay(e) {
+    const clickedOutsideOverlay = overlayRef.current && !overlayRef.current.contains(e.target);
+
+    if (clickedOutsideOverlay && showChat) {
+      console.log('clicked');
+      setShowChat(false);
+    }
+  }
+
+
+
+  document.addEventListener('click', handleClickOutsideOverlay);
 
   const onClick = (e) => {
     e.preventDefault();
-    setShowChat((prev) => !prev);
+    e.stopPropagation(); // Prevents document listener from firing
+    setShowChat(prev => !prev);
   };
+
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -90,8 +109,8 @@ export default function ChatBot() {
 
   return (
     <div>
-      <div className={`chat-container ${!showChat ? "hidden" : "visible"}`}>
-        <div className="chat-box">
+      <div id="chat-container" className={`chat-container ${!showChat ? "hidden" : "visible"}`} ref={overlayRef}>
+        <div className="chat-box" id="chat-box">
           {messages.map((msg, idx) => (
             <div key={idx} className={`message ${msg.type}`}>
               {msg.type === "bot" && idx != 0 ? (
