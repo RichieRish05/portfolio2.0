@@ -8,7 +8,6 @@ type ProjectCardProps = {
   description: string;
   imageLink: string;
   githubLink: string;
-  tags: Array<string>;
   animationLength: string;
 };
 
@@ -17,7 +16,6 @@ export default function ProjectCard({
   description,
   imageLink,
   githubLink,
-  tags,
   animationLength
 }: ProjectCardProps) {
   return (
