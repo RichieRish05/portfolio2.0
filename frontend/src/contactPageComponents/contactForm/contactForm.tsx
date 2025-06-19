@@ -8,14 +8,20 @@ export default function ContactForm() {
   const [emailError, setEmailError] = useState("");
   const [message, setMessage] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [canSubmit, setCanSubmit] = useState(true);
 
   const validateEmail = (email: string) => /^\S+@\S+\.\S+$/.test(email);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!canSubmit) return;
+
+    setCanSubmit(false);
+
     if (!validateEmail(email)) {
       setEmailError("Invalid Email");
+      setCanSubmit(true);
       return;
     } else {
       setEmailError("");
@@ -23,39 +29,35 @@ export default function ContactForm() {
 
     if (message.trim() === "") {
       setMessageError("Message is empty");
+      setCanSubmit(true);
       return;
     } else {
       setMessageError("");
     }
 
-    // Submit via fetch to FormSubmit
-    try {
-      const res = await fetch(
-        "https://formsubmit.co/ajax/004ebf6f2adbab47b6c86b7efea1c915",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            email: email,
-            message: message,
-          }),
-        },
-      );
-
-      if (res.ok) {
+    // Submit via fetch to Google Forms
+    await fetch(import.meta.env.VITE_GOOGLE_FORM_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({
+        email: email,
+        message: message,
+      }),
+    })
+      .then(() => {
         toast.success("Your message has been sent!");
         setEmail("");
         setMessage("");
-      } else {
+        setCanSubmit(true);
+      })
+      .catch((error) => {
         toast.error("Failed to send. Please try again later.");
-      }
-    } catch (err) {
-      toast.error("An error occurred.");
-      console.error(err);
-    }
+        console.error(error);
+        setCanSubmit(true);
+      });
   };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
