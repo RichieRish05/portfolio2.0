@@ -1,8 +1,8 @@
 .video-container {
   display: flex;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 2%;
+  right: 1%;
   width: 10rem;
   height: 10rem;
   /* outline: 1px solid red; */
@@ -34,8 +34,9 @@
 
 .chat-container {
   position: fixed;
-  bottom: 180px;
-  right: 50px;
+  bottom: 20%;
+  right: 5%;
+  width: 40%;
   padding: 1rem;
   background: rgb(0, 0, 0);
   border-radius: 20px;
@@ -56,11 +57,11 @@
 }
 
 .chat-box {
-  height: 20rem;
-  width: 25rem;
+
   overflow-y: auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   margin-bottom: 1rem;
+  height: 20rem;
 }
 
 .message {
@@ -112,4 +113,20 @@
 .button-inactive {
   background-color: #000770;
   color: rgb(69, 69, 69);
+}
+
+
+@media (max-width: 1050px) {
+
+.chat-input {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+
+.chat-container {
+  width: 50%;
+  right: 10%;
+}
+
 }
