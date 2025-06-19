@@ -7,7 +7,7 @@
   height: 10rem;
   /* outline: 1px solid red; */
   z-index: 1000;
-  animation: slideInUp 1s ease-out forwards;
+  transition: transform 1s ease-out forwards;
 }
 
 .video-container:hover {
