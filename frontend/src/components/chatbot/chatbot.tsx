@@ -7,7 +7,17 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import { useState, useEffect, useRef } from "react";
 
-const TypingMessage = ({ text, onTypingStart, onTypingDone }) => {
+type TypingMessageProps = {
+  text: string;
+  onTypingStart: Function;
+  onTypingDone: Function;
+};
+
+const TypingMessage = ({
+  text,
+  onTypingStart,
+  onTypingDone,
+}: TypingMessageProps) => {
   const [typedText, { isDone }] = useTypewriter({
     words: [text],
     typeSpeed: 50,
@@ -38,34 +48,35 @@ export default function ChatBot() {
   const [showChat, setShowChat] = useState(false);
   const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState([
-    { type: "bot", text: "Hi there! I’m Cubby, your personal guide to Rishi’s Portfolio. Feel free to ask me anything about his projects, skills, or professional journey!" },
+    {
+      type: "bot",
+      text: "Hi there! I’m Cubby, your personal guide to Rishi’s Portfolio. Feel free to ask me anything about his projects, skills, or professional journey!",
+    },
   ]);
 
-  const overlayRef = useRef(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
 
-
-
-  function handleClickOutsideOverlay(e) {
-    const clickedOutsideOverlay = overlayRef.current && !overlayRef.current.contains(e.target);
+  function handleClickOutsideOverlay(e: MouseEvent) {
+    const target = e.target as Node | null;
+    const clickedOutsideOverlay =
+      overlayRef.current && !overlayRef.current.contains(target);
 
     if (clickedOutsideOverlay && showChat) {
       setShowChat(false);
     }
   }
 
-  document.addEventListener('click', handleClickOutsideOverlay);
+  document.addEventListener("click", handleClickOutsideOverlay);
 
-  const onClick = (e) => {
+  const onClick = (e: React.MouseEvent<HTMLVideoElement>) => {
     e.preventDefault();
     e.stopPropagation(); // Prevents document listener from firing
-    setShowChat(prev => !prev);
+    setShowChat((prev) => !prev);
   };
 
-
-  const sendMessage = async (e) => {
+  const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!canSend) return;
-
 
     setMessages((prev) => [...prev, { type: "user", text: question }]);
     setQuestion("");
@@ -85,7 +96,6 @@ export default function ChatBot() {
       botMessage = { type: "bot", text: "Sorry, I didn't catch that." };
     }
 
-
     setMessages((prev) => [...prev, botMessage]);
   };
 
@@ -98,7 +108,6 @@ export default function ChatBot() {
     }
   };
 
-
   const handleTypingStart = () => setIsTalking(true);
   const handleTypingDone = () => {
     setIsTalking(false);
@@ -107,7 +116,11 @@ export default function ChatBot() {
 
   return (
     <div>
-      <div id="chat-container" className={`chat-container ${!showChat ? "hidden" : "visible"}`} ref={overlayRef}>
+      <div
+        id="chat-container"
+        className={`chat-container ${!showChat ? "hidden" : "visible"}`}
+        ref={overlayRef}
+      >
         <div className="chat-box" id="chat-box">
           {messages.map((msg, idx) => (
             <div key={idx} className={`message ${msg.type}`}>
@@ -129,33 +142,35 @@ export default function ChatBot() {
             onChange={handleQuestionChange}
             placeholder="Ask a question"
           />
-          <button className={canSend ? "button-active" : "button-inactive"}>Send</button>
+          <button className={canSend ? "button-active" : "button-inactive"}>
+            Send
+          </button>
         </form>
       </div>
 
       <div className="video-container">
-      <video
-        className={`video ${isTalking ? "hide" : "visible"}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        onClick={onClick}
-      >
-        <source src={RestingLion} />
-        Your Browser Does Not Support Video Content
-      </video>
-      <video
-        className={`video ${isTalking ? "visible" : "hide"}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        onClick={onClick}
-      >
-        <source src={TalkingLion} />
-        Your Browser Does Not Support Video Content
-      </video>
+        <video
+          className={`video ${isTalking ? "hide" : "visible"}`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          onClick={onClick}
+        >
+          <source src={RestingLion} />
+          Your Browser Does Not Support Video Content
+        </video>
+        <video
+          className={`video ${isTalking ? "visible" : "hide"}`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          onClick={onClick}
+        >
+          <source src={TalkingLion} />
+          Your Browser Does Not Support Video Content
+        </video>
       </div>
     </div>
   );

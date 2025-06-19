@@ -16,7 +16,7 @@ export default function ProjectCard({
   description,
   imageLink,
   githubLink,
-  animationLength
+  animationLength,
 }: ProjectCardProps) {
   return (
     <Tilt
@@ -25,7 +25,7 @@ export default function ProjectCard({
       transitionSpeed={450}
       scale={1.05}
       className="project-card"
-      style={{"animation": `fadeSlideUp ${animationLength} ease-out forwards`}}
+      style={{ animation: `fadeSlideUp ${animationLength} ease-out forwards` }}
     >
       <div className="image-container">
         <img className="project-image" src={imageLink} />

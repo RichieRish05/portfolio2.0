@@ -15,7 +15,6 @@ export default function ProjectsPage() {
         description="A Custom PyTorch Neural Network to Detect Mood From Sound."
         imageLink={MoodySoundImage}
         githubLink="https://github.com/RichieRish05/MoodySound2"
-        tags={[]}
         animationLength="0.5s"
       />
       <ProjectCard
@@ -23,7 +22,6 @@ export default function ProjectsPage() {
         description="A Multiplayer Chess Game Built With Custom Algorithms."
         imageLink={ChessImage}
         githubLink="https://github.com/RichieRish05/GameOfChess"
-        tags={[]}
         animationLength="1s"
       />
       <ProjectCard
@@ -31,7 +29,6 @@ export default function ProjectsPage() {
         description="A RAG Chatbot Tuned to My Professional Experiences."
         imageLink={ChatToMeImage}
         githubLink="https://github.com/RichieRish05/ChatToMe"
-        tags={[]}
         animationLength="1.5s"
       />
       <ProjectCard
@@ -39,7 +36,6 @@ export default function ProjectsPage() {
         description="A Numpy Tool for Simulating 3D Shadows and Brightness."
         imageLink={BunnyMesh}
         githubLink="https://github.com/RichieRish05/Graphical-Mesh-Shadow-and-Brightness-Calculator"
-        tags={[]}
         animationLength="2s"
       />
     </div>

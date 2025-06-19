@@ -6,7 +6,6 @@
   padding: 2rem;
   color: white;
   margin-top: 6rem; /* adjust to clear the fixed navbar */
-
 }
 
 .github-card {
@@ -31,7 +30,7 @@
   background-color: #191f25;
   border-radius: 1rem;
   min-width: 20rem;
-  width: 100%; 
+  width: 100%;
   align-content: center;
   transition: background-color 0.3s ease;
 }

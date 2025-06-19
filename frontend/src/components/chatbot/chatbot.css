@@ -8,15 +8,11 @@
   /* outline: 1px solid red; */
   z-index: 1000;
   animation: slideInUp 1s ease-out forwards;
-
 }
 
 .video-container:hover {
   transform: scale(1.1);
 }
-
-
-
 
 .video {
   position: absolute;
@@ -117,6 +113,3 @@
   background-color: #000770;
   color: rgb(69, 69, 69);
 }
-
-
-

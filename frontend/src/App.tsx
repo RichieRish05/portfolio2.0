@@ -6,13 +6,11 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import ChatBot from "./components/chatbot/chatbot";
 import Navbar from "./components/navbar/navbar";
 
-
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <ChatBot/>
-
+      <ChatBot />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
