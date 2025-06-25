@@ -10,7 +10,7 @@ export default function ContactPage() {
       <GithubCard />
       <LinkedinCard />
       <MailCard />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </div>
   );
 }
