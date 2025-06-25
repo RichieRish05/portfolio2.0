@@ -118,6 +118,10 @@
 
 @media (max-width: 1050px) {
 
+.video-container{
+  display: none;
+}
+
 .chat-input {
   flex-direction: column;
   display: flex;
